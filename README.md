@@ -1,4 +1,4 @@
-# zipcode_jp
+# japan_postal_code
 
 A new Flutter application.
 
