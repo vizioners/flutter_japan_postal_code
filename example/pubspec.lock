@@ -46,6 +46,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  japan_postal_code:
+    dependency: "direct main"
+    description:
+      path: ".."
+      relative: true
+    source: path
+    version: "1.0.0+1"
   matcher:
     dependency: transitive
     description:
@@ -61,7 +68,7 @@ packages:
     source: hosted
     version: "1.1.7"
   path:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: path
       url: "https://pub.dartlang.org"
@@ -94,12 +101,12 @@ packages:
     source: hosted
     version: "1.5.5"
   sqflite:
-    dependency: "direct main"
+    dependency: "direct dev"
     description:
       name: sqflite
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.1.5"
+    version: "1.1.7"
   stack_trace:
     dependency: transitive
     description:
@@ -157,5 +164,5 @@ packages:
     source: hosted
     version: "2.0.8"
 sdks:
-  dart: ">=2.2.2 <3.0.0"
-  flutter: ">=1.2.1 <2.0.0"
+  dart: ">=2.5.0 <3.0.0"
+  flutter: ">=1.9.1 <2.0.0"
