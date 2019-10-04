@@ -28,11 +28,9 @@ class JapanPostCode  {
           try {
             await Directory(dirname(path)).create(recursive: true);
           } catch (_) {}
-//          Directory directory = new Directory("database/zip.db");
-
           // Copy from asset
           ByteData data = await rootBundle.load(join("packages/japan_postal_code/database", "zip.db"));
-//          ByteData data = await rootBundle.load(directory.path);
+//                    ByteData data = await rootBundle.load(join("database", "zip.db"));
           List<int> bytes =
           data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes);
 
