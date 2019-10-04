@@ -13,19 +13,6 @@ import 'package:japan_postal_code/japan_postal_code.dart';
 void main(){
 
   group('$JapanPostCode', (){
-    const MethodChannel channel = MethodChannel('com.tekartik.sqflite');
-
-    final List<MethodCall> log = <MethodCall>[];
-    String response;
-
-    channel.setMockMethodCallHandler((MethodCall methodCall) async {
-      log.add(methodCall);
-      return response;
-    });
-
-    tearDown(() {
-      log.clear();
-    });
     test('reading', () async {
       final japanPostCode = await JapanPostCode.getInstance();
       final data = await japanPostCode.getJapanPostalCode("0640941");
