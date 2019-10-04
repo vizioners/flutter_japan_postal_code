@@ -37,7 +37,9 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   final zipCode = TextEditingController();
-  String resultZipCode = "";
+  String pref = "";
+  String city = "";
+  String town = "";
 
   @override
   void initState() {
@@ -50,7 +52,9 @@ class _MyHomePageState extends State<MyHomePage> {
     final data = await japanPostCode.getJapanPostalCode(zipCode.text);
     print(data.toString());
     setState(() {
-      resultZipCode = "${data[0]['pref']} ${data[0]['city']} ${data[0]['town']}" ;
+      pref = "${data[0]['pref']}" ;
+      city = "${data[0]['city']}";
+      town = "${data[0]['town']}";
     });
   }
 
@@ -85,7 +89,13 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Container(
-              child: Text(resultZipCode),
+              child: Text("Pref: ${this.pref}"),
+            ),
+            Container(
+              child: Text("City: ${this.city}"),
+            ),
+            Container(
+              child: Text("Town: ${this.town}"),
             )
           ],
         ),
